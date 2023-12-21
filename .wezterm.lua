@@ -51,7 +51,7 @@ config.keys = {
     {
         key = 'W',
         mods = 'CMD',
-        action = wezterm.action.CloseCurrentTab { confirm = false },
+        action = wezterm.action.CloseCurrentTab { confirm = true },
     },
 }
 -- and finally, return the configuration to wezterm
