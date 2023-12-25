@@ -233,15 +233,6 @@ require('lazy').setup({
   --    For additional information see: https://github.com/folke/lazy.nvim#-structuring-your-plugins
   -- { import = 'custom.plugins' },
   -- TERMINAL Setup
-  {
-    'akinsho/toggleterm.nvim',
-    opts = {
-      direction = "horizontal",
-      size = 90,
-      open_mapping = [[<M-j>]],
-    },
-  },
-
   { 'ThePrimeagen/harpoon' }
 }, {})
 
@@ -277,8 +268,10 @@ vim.o.breakindent = true
 -- Save undo history
 vim.o.swapfile = true
 vim.o.backup = true
-vim.o.undodir = os.getenv("HOME") .. '/.config/nvim/undodir'
 vim.o.undofile = true
+vim.o.undodir = os.getenv("HOME") .. '/.config/nvim/undodir'
+vim.o.backupdir = os.getenv("HOME") .. '/.config/nvim/backupdir'
+vim.o.directory = os.getenv("HOME") .. '/.config/nvim/directory'
 
 vim.o.scrolloff = 8
 -- Case-insensitive searching UNLESS \C or capital in search
